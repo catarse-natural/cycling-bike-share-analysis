@@ -160,7 +160,7 @@ colnames(jan_22)
 ```
 
 #### Check if each file has data corresponding to the filename:
-``` ``` 
+
 ```R
 feb_21 %>% summarize(min_day = min(started_at),max_day= max(started_at))
 mar_21 %>% summarize(min_day = min(started_at),max_day= max(started_at))
