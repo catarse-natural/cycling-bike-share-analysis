@@ -144,7 +144,7 @@ colnames(dec_21)
 colnames(jan_22)
 #No change necessary.
 ```
-
+```sh
 'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
 'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
 'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
@@ -359,7 +359,7 @@ cyclistic_trips <- rbind(feb_21, mar_21, apr_21, may_21, jun_21, jul_21,
 ```R
 glimpse(cyclistic_trips)
 ```
-
+```sh
 Rows: 5,601,999
 Columns: 13
 $ ride_id            <chr> "89E7AA6C29227EFF", "0FEFDE2603568365", "E6159D746B…
@@ -375,7 +375,7 @@ $ start_lng          <dbl> -87.66606, -87.66606, -87.63110, -87.67207, -87.625�
 $ end_lat            <dbl> 42.00458, 42.01954, 41.88487, 41.90312, 41.83816, 4…
 $ end_lng            <dbl> -87.66141, -87.66956, -87.62750, -87.67394, -87.645…
 $ member_casual      <chr> "member", "casual", "member", "member", "member", "…
-   
+```
 
 What does represent each column?
 * ride_id - unique ride identifier code
@@ -398,8 +398,9 @@ What does represent each column?
 ```R
  unique(cyclistic_trips$member_casual)
 ```
+```sh
 'member' 'casual'
-
+```
 
 #### Data entry - types of (“rideable_type” column):
 
@@ -407,8 +408,9 @@ What does represent each column?
 ```R
 unique(cyclistic_trips$rideable_type)
 ```
+```sh
 'classic_bike' 'electric_bike' 'docked_bike'
-
+```
 
 #### Checking if there are missing values:
 
@@ -524,7 +526,7 @@ cyclistic_trips %>%  filter(end_station_name =="")%>% count(end_station_name)
 ```R
 cyclistic_trips%>% clean_names%>% str()
 ```
-
+```sh
     'data.frame':	5601999 obs. of  13 variables:
      $ ride_id           : chr  "89E7AA6C29227EFF" "0FEFDE2603568365" "E6159D746B2DBB91" "B32D3199F1C2E75B" ...
      $ rideable_type     : chr  "classic_bike" "classic_bike" "electric_bike" "classic_bike" ...
@@ -539,17 +541,16 @@ cyclistic_trips%>% clean_names%>% str()
      $ end_lat           : num  42 42 41.9 41.9 41.8 ...
      $ end_lng           : num  -87.7 -87.7 -87.6 -87.7 -87.6 ...
      $ member_casual     : chr  "member" "casual" "member" "member" ...   
-
+```
 #### Removing duplicate rows from the column “ride_id”: 
 
 
 ```R
 cyclistic_trips %>% distinct(ride_id, .keep_all = TRUE)%>%nrow(.)
 ```
-
-
+```sh
 5601999
-
+```
 
 # **4.3 Manipulation/transformation:** 
 
@@ -562,6 +563,7 @@ cyclistic_trips <-select(cyclistic_trips, -c("start_lat", "start_lng",
 # check new data frame:
 str(cyclistic_trips)
 ```
+```sh
     'data.frame':	5601999 obs. of  9 variables:
      $ ride_id           : chr  "89E7AA6C29227EFF" "0FEFDE2603568365" "E6159D746B2DBB91" "B32D3199F1C2E75B" ...
      $ rideable_type     : chr  "classic_bike" "classic_bike" "electric_bike" "classic_bike" ...
@@ -572,7 +574,7 @@ str(cyclistic_trips)
      $ end_station_name  : chr  "Sheridan Rd & Columbia Ave" "Bosworth Ave & Howard St" "State St & Randolph St" "Honore St & Division St" ...
      $ end_station_id    : chr  "660" "16806" "TA1305000029" "TA1305000034" ...
      $ member_casual     : chr  "member" "casual" "member" "member" ...
-     
+``` 
 
 #### Rename column member_casual to a more suitable name: rider_type
 
@@ -582,7 +584,7 @@ cyclistic_trips <- cyclistic_trips %>%
   rename(rider_type=member_casual)%>%
   glimpse()
 ```
-```
+```sh
 Rows: 5,601,999
 Columns: 9
 $ ride_id            <chr> "89E7AA6C29227EFF", "0FEFDE2603568365", "E6159D746B…
@@ -612,7 +614,7 @@ cyclistic_trips$ride_duration <- as.numeric(as.character(cyclistic_trips$ride_du
 glimpse(cyclistic_trips)
 ```
 
-```
+```sh 
 Rows: 5,601,999
 Columns: 10
 $ ride_id            <chr> "89E7AA6C29227EFF", "0FEFDE2603568365", "E6159D746B…
@@ -637,7 +639,6 @@ cyclistic_trips$month <-format(as.Date(cyclistic_trips$date),"%b")
 cyclistic_trips$day <-format(as.Date(cyclistic_trips$date),"%d")
 cyclistic_trips$day_of_week <- format(as.Date(cyclistic_trips$date), "%A")
 cyclistic_trips$hour <- format(as.POSIXct(cyclistic_trips$started_at),"%H")
-
 ```
 
 #### Sort data by ride duration:
@@ -1298,9 +1299,9 @@ find_mode(data_casual$ride_duration)
 
 ```
 
-
+```sh
 8.23333333333333
-
+```
 
 ##### The most frequent trip duration among casuals: about 8 minutes
 
@@ -1314,9 +1315,9 @@ data_member <- cyclistic_trips_clean %>%
 find_mode(data_member$ride_duration)
 ```
 
-
+```sh
 4.83333333333333
-
+```
 
 ##### The most frequent trip duration among members: almost 5 minutes
 
