@@ -157,7 +157,7 @@ colnames(jan_22)
 'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
 'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
 'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
-
+```
 
 #### Check if each file has data corresponding to the filename:
 
@@ -563,7 +563,6 @@ cyclistic_trips <-select(cyclistic_trips, -c("start_lat", "start_lng",
 # check new data frame:
 str(cyclistic_trips)
 ```
-```sh
     'data.frame':	5601999 obs. of  9 variables:
      $ ride_id           : chr  "89E7AA6C29227EFF" "0FEFDE2603568365" "E6159D746B2DBB91" "B32D3199F1C2E75B" ...
      $ rideable_type     : chr  "classic_bike" "classic_bike" "electric_bike" "classic_bike" ...
@@ -574,7 +573,7 @@ str(cyclistic_trips)
      $ end_station_name  : chr  "Sheridan Rd & Columbia Ave" "Bosworth Ave & Howard St" "State St & Randolph St" "Honore St & Division St" ...
      $ end_station_id    : chr  "660" "16806" "TA1305000029" "TA1305000034" ...
      $ member_casual     : chr  "member" "casual" "member" "member" ...
-```     
+     
 
 #### Rename column member_casual to a more suitable name: rider_type
 
@@ -584,8 +583,8 @@ cyclistic_trips <- cyclistic_trips %>%
   rename(rider_type=member_casual)%>%
   glimpse()
 ```
-```sh
-    Rows: 5,601,999
+```
+Rows: 5,601,999
 Columns: 9
 $ ride_id            <chr> "89E7AA6C29227EFF", "0FEFDE2603568365", "E6159D746B…
 $ rideable_type      <chr> "classic_bike", "classic_bike", "electric_bike", "c…
@@ -614,8 +613,8 @@ cyclistic_trips$ride_duration <- as.numeric(as.character(cyclistic_trips$ride_du
 glimpse(cyclistic_trips)
 ```
 
-```sh
-    Rows: 5,601,999
+```
+Rows: 5,601,999
 Columns: 10
 $ ride_id            <chr> "89E7AA6C29227EFF", "0FEFDE2603568365", "E6159D746B…
 $ rideable_type      <chr> "classic_bike", "classic_bike", "electric_bike", "c…
