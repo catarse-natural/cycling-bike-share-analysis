@@ -75,35 +75,36 @@ library(ggplot2)
 library(janitor)
 ```
 
-    ── [1mAttaching packages[22m ─────────────────────────────────────── tidyverse 1.3.1 ──
-    
-    [32m✔[39m [34mggplot2[39m 3.3.5     [32m✔[39m [34mpurrr  [39m 0.3.4
-    [32m✔[39m [34mtibble [39m 3.1.5     [32m✔[39m [34mdplyr  [39m 1.0.7
-    [32m✔[39m [34mtidyr  [39m 1.1.4     [32m✔[39m [34mstringr[39m 1.4.0
-    [32m✔[39m [34mreadr  [39m 2.0.2     [32m✔[39m [34mforcats[39m 0.5.1
-    
-    ── [1mConflicts[22m ────────────────────────────────────────── tidyverse_conflicts() ──
-    [31m✖[39m [34mdplyr[39m::[32mfilter()[39m masks [34mstats[39m::filter()
-    [31m✖[39m [34mdplyr[39m::[32mlag()[39m    masks [34mstats[39m::lag()
-    
-    
-    Attaching package: ‘lubridate’
-    
-    
-    The following objects are masked from ‘package:base’:
-    
-        date, intersect, setdiff, union
-    
-    
-    
-    Attaching package: ‘janitor’
-    
-    
-    The following objects are masked from ‘package:stats’:
-    
-        chisq.test, fisher.test
-    
-    
+```sh
+── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
+
+✔ ggplot2 3.3.5     ✔ purrr   0.3.4
+✔ tibble  3.1.5     ✔ dplyr   1.0.7
+✔ tidyr   1.1.4     ✔ stringr 1.4.0
+✔ readr   2.0.2     ✔ forcats 0.5.1
+
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+
+
+Attaching package: ‘lubridate’
+
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+
+
+Attaching package: ‘janitor’
+
+
+The following objects are masked from ‘package:stats’:
+
+    chisq.test, fisher.test
+
+```   
     
 
 
@@ -144,125 +145,20 @@ colnames(jan_22)
 #No change necessary.
 ```
 
-
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'ride_id'</li><li>'rideable_type'</li><li>'started_at'</li><li>'ended_at'</li><li>'start_station_name'</li><li>'start_station_id'</li><li>'end_station_name'</li><li>'end_station_id'</li><li>'start_lat'</li><li>'start_lng'</li><li>'end_lat'</li><li>'end_lng'</li><li>'member_casual'</li></ol>
-
-
-
-
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'ride_id'</li><li>'rideable_type'</li><li>'started_at'</li><li>'ended_at'</li><li>'start_station_name'</li><li>'start_station_id'</li><li>'end_station_name'</li><li>'end_station_id'</li><li>'start_lat'</li><li>'start_lng'</li><li>'end_lat'</li><li>'end_lng'</li><li>'member_casual'</li></ol>
-
-
-
-
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'ride_id'</li><li>'rideable_type'</li><li>'started_at'</li><li>'ended_at'</li><li>'start_station_name'</li><li>'start_station_id'</li><li>'end_station_name'</li><li>'end_station_id'</li><li>'start_lat'</li><li>'start_lng'</li><li>'end_lat'</li><li>'end_lng'</li><li>'member_casual'</li></ol>
-
-
-
-
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'ride_id'</li><li>'rideable_type'</li><li>'started_at'</li><li>'ended_at'</li><li>'start_station_name'</li><li>'start_station_id'</li><li>'end_station_name'</li><li>'end_station_id'</li><li>'start_lat'</li><li>'start_lng'</li><li>'end_lat'</li><li>'end_lng'</li><li>'member_casual'</li></ol>
-
-
-
-
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'ride_id'</li><li>'rideable_type'</li><li>'started_at'</li><li>'ended_at'</li><li>'start_station_name'</li><li>'start_station_id'</li><li>'end_station_name'</li><li>'end_station_id'</li><li>'start_lat'</li><li>'start_lng'</li><li>'end_lat'</li><li>'end_lng'</li><li>'member_casual'</li></ol>
-
-
-
-
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'ride_id'</li><li>'rideable_type'</li><li>'started_at'</li><li>'ended_at'</li><li>'start_station_name'</li><li>'start_station_id'</li><li>'end_station_name'</li><li>'end_station_id'</li><li>'start_lat'</li><li>'start_lng'</li><li>'end_lat'</li><li>'end_lng'</li><li>'member_casual'</li></ol>
-
-
-
-
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'ride_id'</li><li>'rideable_type'</li><li>'started_at'</li><li>'ended_at'</li><li>'start_station_name'</li><li>'start_station_id'</li><li>'end_station_name'</li><li>'end_station_id'</li><li>'start_lat'</li><li>'start_lng'</li><li>'end_lat'</li><li>'end_lng'</li><li>'member_casual'</li></ol>
-
-
-
-
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'ride_id'</li><li>'rideable_type'</li><li>'started_at'</li><li>'ended_at'</li><li>'start_station_name'</li><li>'start_station_id'</li><li>'end_station_name'</li><li>'end_station_id'</li><li>'start_lat'</li><li>'start_lng'</li><li>'end_lat'</li><li>'end_lng'</li><li>'member_casual'</li></ol>
-
-
-
-
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'ride_id'</li><li>'rideable_type'</li><li>'started_at'</li><li>'ended_at'</li><li>'start_station_name'</li><li>'start_station_id'</li><li>'end_station_name'</li><li>'end_station_id'</li><li>'start_lat'</li><li>'start_lng'</li><li>'end_lat'</li><li>'end_lng'</li><li>'member_casual'</li></ol>
-
-
-
-
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'ride_id'</li><li>'rideable_type'</li><li>'started_at'</li><li>'ended_at'</li><li>'start_station_name'</li><li>'start_station_id'</li><li>'end_station_name'</li><li>'end_station_id'</li><li>'start_lat'</li><li>'start_lng'</li><li>'end_lat'</li><li>'end_lng'</li><li>'member_casual'</li></ol>
-
-
-
-
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'ride_id'</li><li>'rideable_type'</li><li>'started_at'</li><li>'ended_at'</li><li>'start_station_name'</li><li>'start_station_id'</li><li>'end_station_name'</li><li>'end_station_id'</li><li>'start_lat'</li><li>'start_lng'</li><li>'end_lat'</li><li>'end_lng'</li><li>'member_casual'</li></ol>
-
-
-
-
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'ride_id'</li><li>'rideable_type'</li><li>'started_at'</li><li>'ended_at'</li><li>'start_station_name'</li><li>'start_station_id'</li><li>'end_station_name'</li><li>'end_station_id'</li><li>'start_lat'</li><li>'start_lng'</li><li>'end_lat'</li><li>'end_lng'</li><li>'member_casual'</li></ol>
-
-
+```sh
+'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
+'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
+'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
+'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
+'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
+'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
+'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
+'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
+'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
+'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
+'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
+'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
+```
 
 #### Check if each file has data corresponding to the filename:
 
@@ -465,23 +361,23 @@ cyclistic_trips <- rbind(feb_21, mar_21, apr_21, may_21, jun_21, jul_21,
 ```R
 glimpse(cyclistic_trips)
 ```
-
-    Rows: 5,601,999
-    Columns: 13
-    $ ride_id            [3m[90m<chr>[39m[23m "89E7AA6C29227EFF", "0FEFDE2603568365", "E6159D746B…
-    $ rideable_type      [3m[90m<chr>[39m[23m "classic_bike", "classic_bike", "electric_bike", "c…
-    $ started_at         [3m[90m<chr>[39m[23m "2021-02-12 16:14:56", "2021-02-14 17:52:38", "2021…
-    $ ended_at           [3m[90m<chr>[39m[23m "2021-02-12 16:21:43", "2021-02-14 18:12:09", "2021…
-    $ start_station_name [3m[90m<chr>[39m[23m "Glenwood Ave & Touhy Ave", "Glenwood Ave & Touhy A…
-    $ start_station_id   [3m[90m<chr>[39m[23m "525", "525", "KA1503000012", "637", "13216", "1800…
-    $ end_station_name   [3m[90m<chr>[39m[23m "Sheridan Rd & Columbia Ave", "Bosworth Ave & Howar…
-    $ end_station_id     [3m[90m<chr>[39m[23m "660", "16806", "TA1305000029", "TA1305000034", "TA…
-    $ start_lat          [3m[90m<dbl>[39m[23m 42.01270, 42.01270, 41.88579, 41.89563, 41.83473, 4…
-    $ start_lng          [3m[90m<dbl>[39m[23m -87.66606, -87.66606, -87.63110, -87.67207, -87.625…
-    $ end_lat            [3m[90m<dbl>[39m[23m 42.00458, 42.01954, 41.88487, 41.90312, 41.83816, 4…
-    $ end_lng            [3m[90m<dbl>[39m[23m -87.66141, -87.66956, -87.62750, -87.67394, -87.645…
-    $ member_casual      [3m[90m<chr>[39m[23m "member", "casual", "member", "member", "member", "…
-    
+```sh
+   Rows: 5,601,999
+Columns: 13
+$ ride_id            <chr> "89E7AA6C29227EFF", "0FEFDE2603568365", "E6159D746B…
+$ rideable_type      <chr> "classic_bike", "classic_bike", "electric_bike", "c…
+$ started_at         <chr> "2021-02-12 16:14:56", "2021-02-14 17:52:38", "2021…
+$ ended_at           <chr> "2021-02-12 16:21:43", "2021-02-14 18:12:09", "2021…
+$ start_station_name <chr> "Glenwood Ave & Touhy Ave", "Glenwood Ave & Touhy A…
+$ start_station_id   <chr> "525", "525", "KA1503000012", "637", "13216", "1800…
+$ end_station_name   <chr> "Sheridan Rd & Columbia Ave", "Bosworth Ave & Howar…
+$ end_station_id     <chr> "660", "16806", "TA1305000029", "TA1305000034", "TA…
+$ start_lat          <dbl> 42.01270, 42.01270, 41.88579, 41.89563, 41.83473, 4…
+$ start_lng          <dbl> -87.66606, -87.66606, -87.63110, -87.67207, -87.625…
+$ end_lat            <dbl> 42.00458, 42.01954, 41.88487, 41.90312, 41.83816, 4…
+$ end_lng            <dbl> -87.66141, -87.66956, -87.62750, -87.67394, -87.645…
+$ member_casual      <chr> "member", "casual", "member", "member", "member", "…
+```    
 
 What does represent each column?
 * ride_id - unique ride identifier code
@@ -504,16 +400,9 @@ What does represent each column?
 ```R
  unique(cyclistic_trips$member_casual)
 ```
-
-
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'member'</li><li>'casual'</li></ol>
-
-
+```sh
+'member''casual'
+```
 
 #### Data entry - types of (“rideable_type” column):
 
@@ -521,16 +410,9 @@ What does represent each column?
 ```R
 unique(cyclistic_trips$rideable_type)
 ```
-
-
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'classic_bike'</li><li>'electric_bike'</li><li>'docked_bike'</li></ol>
-
-
+```sh
+'classic_bike''electric_bike''docked_bike'
+```
 
 #### Checking if there are missing values:
 
@@ -646,7 +528,7 @@ cyclistic_trips %>%  filter(end_station_name =="")%>% count(end_station_name)
 ```R
 cyclistic_trips%>% clean_names%>% str()
 ```
-
+```sh
     'data.frame':	5601999 obs. of  13 variables:
      $ ride_id           : chr  "89E7AA6C29227EFF" "0FEFDE2603568365" "E6159D746B2DBB91" "B32D3199F1C2E75B" ...
      $ rideable_type     : chr  "classic_bike" "classic_bike" "electric_bike" "classic_bike" ...
@@ -661,7 +543,7 @@ cyclistic_trips%>% clean_names%>% str()
      $ end_lat           : num  42 42 41.9 41.9 41.8 ...
      $ end_lng           : num  -87.7 -87.7 -87.6 -87.7 -87.6 ...
      $ member_casual     : chr  "member" "casual" "member" "member" ...
-    
+```   
 
 #### Removing duplicate rows from the column “ride_id”: 
 
@@ -685,7 +567,7 @@ cyclistic_trips <-select(cyclistic_trips, -c("start_lat", "start_lng",
 # check new data frame:
 str(cyclistic_trips)
 ```
-
+```sh
     'data.frame':	5601999 obs. of  9 variables:
      $ ride_id           : chr  "89E7AA6C29227EFF" "0FEFDE2603568365" "E6159D746B2DBB91" "B32D3199F1C2E75B" ...
      $ rideable_type     : chr  "classic_bike" "classic_bike" "electric_bike" "classic_bike" ...
@@ -696,7 +578,7 @@ str(cyclistic_trips)
      $ end_station_name  : chr  "Sheridan Rd & Columbia Ave" "Bosworth Ave & Howard St" "State St & Randolph St" "Honore St & Division St" ...
      $ end_station_id    : chr  "660" "16806" "TA1305000029" "TA1305000034" ...
      $ member_casual     : chr  "member" "casual" "member" "member" ...
-    
+```     
 
 #### Rename column member_casual to a more suitable name: rider_type
 
@@ -706,19 +588,19 @@ cyclistic_trips <- cyclistic_trips %>%
   rename(rider_type=member_casual)%>%
   glimpse()
 ```
-
+```sh
     Rows: 5,601,999
-    Columns: 9
-    $ ride_id            [3m[90m<chr>[39m[23m "89E7AA6C29227EFF", "0FEFDE2603568365", "E6159D746B…
-    $ rideable_type      [3m[90m<chr>[39m[23m "classic_bike", "classic_bike", "electric_bike", "c…
-    $ started_at         [3m[90m<chr>[39m[23m "2021-02-12 16:14:56", "2021-02-14 17:52:38", "2021…
-    $ ended_at           [3m[90m<chr>[39m[23m "2021-02-12 16:21:43", "2021-02-14 18:12:09", "2021…
-    $ start_station_name [3m[90m<chr>[39m[23m "Glenwood Ave & Touhy Ave", "Glenwood Ave & Touhy A…
-    $ start_station_id   [3m[90m<chr>[39m[23m "525", "525", "KA1503000012", "637", "13216", "1800…
-    $ end_station_name   [3m[90m<chr>[39m[23m "Sheridan Rd & Columbia Ave", "Bosworth Ave & Howar…
-    $ end_station_id     [3m[90m<chr>[39m[23m "660", "16806", "TA1305000029", "TA1305000034", "TA…
-    $ rider_type         [3m[90m<chr>[39m[23m "member", "casual", "member", "member", "member", "…
-    
+Columns: 9
+$ ride_id            <chr> "89E7AA6C29227EFF", "0FEFDE2603568365", "E6159D746B…
+$ rideable_type      <chr> "classic_bike", "classic_bike", "electric_bike", "c…
+$ started_at         <chr> "2021-02-12 16:14:56", "2021-02-14 17:52:38", "2021…
+$ ended_at           <chr> "2021-02-12 16:21:43", "2021-02-14 18:12:09", "2021…
+$ start_station_name <chr> "Glenwood Ave & Touhy Ave", "Glenwood Ave & Touhy A…
+$ start_station_id   <chr> "525", "525", "KA1503000012", "637", "13216", "1800…
+$ end_station_name   <chr> "Sheridan Rd & Columbia Ave", "Bosworth Ave & Howar…
+$ end_station_id     <chr> "660", "16806", "TA1305000029", "TA1305000034", "TA…
+$ rider_type         <chr> "member", "casual", "member", "member", "member", "…
+```   
 
 #### Create a column to calculate the ride duration (in minutes): difference between “ended_at” and “started_at”
 
@@ -734,22 +616,22 @@ cyclistic_trips$ride_duration<-difftime(cyclistic_trips$ended_at,
 ```R
 cyclistic_trips$ride_duration <- as.numeric(as.character(cyclistic_trips$ride_duration))
 glimpse(cyclistic_trips)
-
 ```
 
+```sh
     Rows: 5,601,999
-    Columns: 10
-    $ ride_id            [3m[90m<chr>[39m[23m "89E7AA6C29227EFF", "0FEFDE2603568365", "E6159D746B…
-    $ rideable_type      [3m[90m<chr>[39m[23m "classic_bike", "classic_bike", "electric_bike", "c…
-    $ started_at         [3m[90m<chr>[39m[23m "2021-02-12 16:14:56", "2021-02-14 17:52:38", "2021…
-    $ ended_at           [3m[90m<chr>[39m[23m "2021-02-12 16:21:43", "2021-02-14 18:12:09", "2021…
-    $ start_station_name [3m[90m<chr>[39m[23m "Glenwood Ave & Touhy Ave", "Glenwood Ave & Touhy A…
-    $ start_station_id   [3m[90m<chr>[39m[23m "525", "525", "KA1503000012", "637", "13216", "1800…
-    $ end_station_name   [3m[90m<chr>[39m[23m "Sheridan Rd & Columbia Ave", "Bosworth Ave & Howar…
-    $ end_station_id     [3m[90m<chr>[39m[23m "660", "16806", "TA1305000029", "TA1305000034", "TA…
-    $ rider_type         [3m[90m<chr>[39m[23m "member", "casual", "member", "member", "member", "…
-    $ ride_duration      [3m[90m<dbl>[39m[23m 6.7833333, 19.5166667, 8.8666667, 4.4166667, 15.233…
-    
+Columns: 10
+$ ride_id            <chr> "89E7AA6C29227EFF", "0FEFDE2603568365", "E6159D746B…
+$ rideable_type      <chr> "classic_bike", "classic_bike", "electric_bike", "c…
+$ started_at         <chr> "2021-02-12 16:14:56", "2021-02-14 17:52:38", "2021…
+$ ended_at           <chr> "2021-02-12 16:21:43", "2021-02-14 18:12:09", "2021…
+$ start_station_name <chr> "Glenwood Ave & Touhy Ave", "Glenwood Ave & Touhy A…
+$ start_station_id   <chr> "525", "525", "KA1503000012", "637", "13216", "1800…
+$ end_station_name   <chr> "Sheridan Rd & Columbia Ave", "Bosworth Ave & Howar…
+$ end_station_id     <chr> "660", "16806", "TA1305000029", "TA1305000034", "TA…
+$ rider_type         <chr> "member", "casual", "member", "member", "member", "…
+$ ride_duration      <dbl> 6.7833333, 19.5166667, 8.8666667, 4.4166667, 15.233…
+```     
 
 #### Format the date column and create columns to represent the day, month, year, day of the week and hour:
 
@@ -954,7 +836,7 @@ ggplot(filter(cyclistic_trips_clean,cyclistic_trips_clean$ride_duration < 180))+
     
 
 
-##### This first graph shows us that members tend to take shorter trips than casual riders.
+##### This first graphic shows us that members tend to take shorter trips than casual riders.
 
 
 ```R
@@ -1187,7 +1069,7 @@ ggplot(data=cyclistic_trips_clean,mapping = aes(x=rideable_type,fill=rider_type)
     
 
 
-##### The graph reveals that only casuals use the docked bike type in the observed period. Both casual and members prefer using classic bike rather than others.
+##### The graphic reveals that only casuals use the docked bike type in the observed period. Both casual and members prefer using classic bike rather than others.
 
 ##### **Stations use:**
 ##### Now let's look at the usage patterns of the stations. Since the “start_station_name” and “end_station_name” columns have missing data, as I observed in the cleaning steps, I will filter the data to avoid these empty records. Later, I will analyze them so that corrective actions can be implemented.
