@@ -58,7 +58,7 @@ Pre-cleaning activities: check if data is sufficient; download the previous 12 m
 
 
 # **4.1** Choosing tools: 
-For this work, the programming language R was chosen to process, clean, manipulate,analyze and visualize data because of the following reasons:
+R language was chosen to process, clean, manipulate,analyze and visualize data because of the following reasons:
 * a large dataset that includes 01 year of historical series of records; 
 * the need to perform operations and statistical analyses.
 
@@ -145,7 +145,6 @@ colnames(jan_22)
 #No change necessary.
 ```
 
-```sh
 'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
 'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
 'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
@@ -158,7 +157,7 @@ colnames(jan_22)
 'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
 'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
 'ride_id''rideable_type''started_at''ended_at''start_station_name''start_station_id''end_station_name''end_station_id''start_lat''start_lng''end_lat''end_lng''member_casual'
-```
+
 
 #### Check if each file has data corresponding to the filename:
 
@@ -361,8 +360,8 @@ cyclistic_trips <- rbind(feb_21, mar_21, apr_21, may_21, jun_21, jul_21,
 ```R
 glimpse(cyclistic_trips)
 ```
-```sh
-   Rows: 5,601,999
+```
+Rows: 5,601,999
 Columns: 13
 $ ride_id            <chr> "89E7AA6C29227EFF", "0FEFDE2603568365", "E6159D746B…
 $ rideable_type      <chr> "classic_bike", "classic_bike", "electric_bike", "c…
@@ -400,9 +399,8 @@ What does represent each column?
 ```R
  unique(cyclistic_trips$member_casual)
 ```
-```sh
-'member''casual'
-```
+'member' 'casual'
+
 
 #### Data entry - types of (“rideable_type” column):
 
@@ -410,9 +408,8 @@ What does represent each column?
 ```R
 unique(cyclistic_trips$rideable_type)
 ```
-```sh
-'classic_bike''electric_bike''docked_bike'
-```
+'classic_bike' 'electric_bike' 'docked_bike'
+
 
 #### Checking if there are missing values:
 
@@ -528,7 +525,7 @@ cyclistic_trips %>%  filter(end_station_name =="")%>% count(end_station_name)
 ```R
 cyclistic_trips%>% clean_names%>% str()
 ```
-```sh
+
     'data.frame':	5601999 obs. of  13 variables:
      $ ride_id           : chr  "89E7AA6C29227EFF" "0FEFDE2603568365" "E6159D746B2DBB91" "B32D3199F1C2E75B" ...
      $ rideable_type     : chr  "classic_bike" "classic_bike" "electric_bike" "classic_bike" ...
@@ -542,8 +539,7 @@ cyclistic_trips%>% clean_names%>% str()
      $ start_lng         : num  -87.7 -87.7 -87.6 -87.7 -87.6 ...
      $ end_lat           : num  42 42 41.9 41.9 41.8 ...
      $ end_lng           : num  -87.7 -87.7 -87.6 -87.7 -87.6 ...
-     $ member_casual     : chr  "member" "casual" "member" "member" ...
-```   
+     $ member_casual     : chr  "member" "casual" "member" "member" ...   
 
 #### Removing duplicate rows from the column “ride_id”: 
 
