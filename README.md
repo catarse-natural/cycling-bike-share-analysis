@@ -160,8 +160,7 @@ colnames(jan_22)
 ```
 
 #### Check if each file has data corresponding to the filename:
-
-
+```
 ```R
 feb_21 %>% summarize(min_day = min(started_at),max_day= max(started_at))
 mar_21 %>% summarize(min_day = min(started_at),max_day= max(started_at))
@@ -176,7 +175,7 @@ nov_21 %>% summarize(min_day = min(started_at),max_day= max(started_at))
 dec_21 %>% summarize(min_day = min(started_at),max_day= max(started_at))
 jan_22 %>% summarize(min_day = min(started_at),max_day= max(started_at))
 #No change necessary.
-```
+``` 
 
 
 <table class="dataframe">
@@ -360,7 +359,7 @@ cyclistic_trips <- rbind(feb_21, mar_21, apr_21, may_21, jun_21, jul_21,
 ```R
 glimpse(cyclistic_trips)
 ```
-```
+
 Rows: 5,601,999
 Columns: 13
 $ ride_id            <chr> "89E7AA6C29227EFF", "0FEFDE2603568365", "E6159D746B…
@@ -376,7 +375,7 @@ $ start_lng          <dbl> -87.66606, -87.66606, -87.63110, -87.67207, -87.625�
 $ end_lat            <dbl> 42.00458, 42.01954, 41.88487, 41.90312, 41.83816, 4…
 $ end_lng            <dbl> -87.66141, -87.66956, -87.62750, -87.67394, -87.645…
 $ member_casual      <chr> "member", "casual", "member", "member", "member", "…
-```    
+   
 
 What does represent each column?
 * ride_id - unique ride identifier code
